@@ -1,6 +1,7 @@
 from flask import Flask
+import os
 
 app = Flask(__name__)
-app.config["SECRET_KEY"] = "7Hsjd93p9dlo-39asdmOSD9sd-P39GMipgsjwi52"
+app.config["SECRET_KEY"] = os.environ.get('SECRET_KEY')
 
 from Flask_Directory import routes, auth
