@@ -1,11 +1,14 @@
 from flask import render_template, request
 from Flask_Directory import app
+import os
 
 
 @app.route('/')
 @app.route('/home')
 def index():
-    return render_template("home.html")
+    email = os.environ['EMAIL']
+
+    return render_template("home.html", value=email)
 
 
 @app.route('/about')
@@ -30,4 +33,6 @@ def blog():
 
 @app.route('/contact')
 def contact():
-    return render_template('contact.html')
+    email = os.environ['EMAIL']
+
+    return render_template('contact.html', value=email)
