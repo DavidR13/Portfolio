@@ -1,0 +1,7 @@
+venv
+my_signup.html
+.DS_Store
+.idea
+Flask_Directory/.DS_Store
+Flask_Directory/static/.DS_Store
+Flask_Directory/static/images/.DS_Store

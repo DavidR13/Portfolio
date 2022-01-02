@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    David Rojas | Python Developer | Contact
+{% endblock %}
+
+{% block content %}
+    <section class="p-5 contact" id="page">
+        <div class="container">
+            <div class="contact-info">
+                    <h2>Contact Me</h2>
+                </div>
+            <div class="d-sm-flex justify-content-between pt-5">
+                <form name="contact-form" class="row g-3" action="mailto:davidarojas16@gmail.com" method="post">
+                    <div class="col-12">
+                        <p>I'm open to discussing new opportunities, but if you have any other questions,
+                        please feel free to send me a message!</p>
+                    </div>
+                    <div class="col-md-6">
+                      <input
+                              type="text"
+                              class="form-control"
+                              id="inputName"
+                              placeholder="Name"
+                      >
+                    </div>
+                    <div class="col-md-6">
+                      <input type="email"
+                             class="form-control"
+                             id="inputEmail"
+                             name="emailField"
+                             placeholder="Email"
+                             required
+                      >
+                    </div>
+                    <div class="col-12">
+                      <input
+                              type="text"
+                              class="form-control"
+                              id="inputSubject"
+                              placeholder="Subject"
+                      >
+                    </div>
+                    <div class="col-12">
+                      <textarea
+                              class="form-control"
+                              id="textArea"
+                              name="messageField"
+                              rows="3"
+                              placeholder="Message"
+                              required>
+                      </textarea>
+                    </div>
+                    <div class="col-12 text-center">
+                        <button onclick="buttonClicked()"
+                                id="submit-btn"
+                                type="submit"
+                                class="btn btn-lg btn-outline-primary mb-3">
+                            Send!
+                        </button>
+                    </div>
+                 </form>
+                <div class="contact-form-content text-center d-none d-lg-block">
+                    <img src="../static/images/undraw_code_thinking_re_gka2%201.svg" alt="Thinking image"
+                        class="img-fluid mx-auto my-auto">
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

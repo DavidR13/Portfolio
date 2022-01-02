@@ -1,0 +1,258 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    David Rojas | Python Developer | Home
+{% endblock %}
+
+{% block content %}
+    <!-- Banner Section -->
+    <section class="px-5 banner">
+        <div class="container">
+            <div class="d-sm-flex justify-content-between">
+                <div class="banner-info">
+                    <h3>Hi there,</h3>
+                    <h1>I'm <span class="banner-h1-span">David</span></h1>
+                    <p class="lead">
+                        <span class="banner-p-span">Python Developer (Data Analysis and Back-End)</span>
+                    </p>
+                    <a href="{{ url_for('contact') }}">
+                        <button type="button" class="btn btn-outline-primary btn-lg">Contact Me</button>
+                    </a>
+                </div>
+                <lottie-player class="pb-5 lottie w-50 d-none d-md-block" src="https://assets3.lottiefiles.com/packages/lf20_fibnfbnx.json" mode="bounce"
+                                   background="transparent" speed="1" style="width: 600px; height: 600px;" loop
+                                   autoplay>
+                </lottie-player>
+            </div>
+            <div class="scroll-down my-auto">
+                <a href="#skills-section">
+                    <lottie-player  class="lottie w-50 d-none d-sm-block" src="https://assets10.lottiefiles.com/packages/lf20_e0zbhoy2.json"
+                                   background="transparent" speed="1" style="width: 200px; height: 200px;" loop
+                                   autoplay>
+                    </lottie-player>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="p-5 skills" id="skills-section">
+        <div class="container">
+            <div class="skills-info text-center pb-5">
+                <h2>About Me and My Skills</h2>
+            </div>
+            <div class="d-lg-flex justify-content-between">
+                <div class="skills-description col-lg-5 my-auto">
+                    <p>
+                        Since I was young, I have always had a love and interest in technology, which is maybe why my family
+                        always calls me for every technical issue they have... Anyways, that love grew even more once I started
+                        learning about programming.
+                        <br><br>
+                        In university, I was able to learn about <span>Python</span>, and it instantly became my favorite language.
+                        For me, it is incredibly rewarding to see the fruits of my labors come together gradually
+                        following all the hard work, problem-solving, and research process.
+                        <br><br>
+                        I really enjoy learning new things and acquiring more experience; I'm open to new opportunities
+                        to continue doing that.
+                    </p>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-lg-3 col-md">
+                        <div class="card">
+                            <img src="../static/images/akar-icons_python-fill.svg" class="card-img-top" alt="Python logo">
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md">
+                        <div class="card">
+                            <img src="../static/images/logos_flask.svg" class="card-img-top" alt="Flask logo">
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md">
+                        <div class="card">
+                            <img src="../static/images/Component%201.svg" class="card-img-top" alt="Pandas logo">
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md">
+                        <div class="card">
+                            <img src="../static/images/akar-icons_html-fill.svg" class="card-img-top" alt="HTML logo">
+                        </div>
+                    </div>
+                    <div class="w-100"></div>
+                    <div class="col-lg-3 col-md">
+                        <div class="card">
+                            <img src="../static/images/akar-icons_css-fill.svg" class="card-img-top" alt="CSS logo">
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md">
+                        <div class="card">
+                            <img src="../static/images/cib_js.svg" class="card-img-top" alt="JS logo">
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md">
+                        <div class="card">
+                            <img src="../static/images/akar-icons_bootstrap-fill.svg" class="card-img-top" alt="Bootstrap logo">
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md">
+                        <div class="card">
+                            <img src="../static/images/carbon_sql.svg" class="card-img-top" alt="SQL logo">
+                        </div>
+                    </div>
+                    <div class="w-100"></div>
+                    <div class="col-lg-3 col-md">
+                        <div class="card">
+                            <img src="../static/images/bx_bxs-file-json.svg" class="card-img-top" alt="JSON logo">
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md">
+                        <div class="card">
+                            <img src="../static/images/bi_wordpress.svg" class="card-img-top" alt="Wordpress logo">
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md">
+                        <div class="card">
+                            <img src="../static/images/bi_git.svg" class="card-img-top" alt="Git logo">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="p-5 projects">
+        <div class="container">
+            <div class="project-info text-center pb-5">
+                <h2>Some of My Projects</h2>
+            </div>
+            <div class="row row-cols-1 row-cols-md-3">
+                 <div class="col">
+                    <div class="card h-100">
+                      <img src="../static/images/akar-icons_python-fill.svg" class="card-img-top justify-content-center" alt="...">
+                      <div class="card-body">
+                        <h5 class="card-title">Project</h5>
+                        <p class="card-text">Built using ...</p>
+                      </div>
+                      <div class="card-footer">
+                          <a href="" class="footer-live">Live</a>
+                          <a href="" class="footer-git"><i class="fab fa-github"></i></a>
+                      </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                      <img src="../static/images/akar-icons_python-fill.svg" class="card-img-top justify-content-center" alt="...">
+                      <div class="card-body">
+                        <h5 class="card-title">Project</h5>
+                        <p class="card-text">Built using ...</p>
+                      </div>
+                      <div class="card-footer">
+                          <a href="" class="footer-live">Live</a>
+                          <a href="" class="footer-git"><i class="fab fa-github"></i></a>
+                      </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                      <img src="../static/images/akar-icons_python-fill.svg" class="card-img-top justify-content-center" alt="...">
+                      <div class="card-body">
+                        <h5 class="card-title">Project</h5>
+                        <p class="card-text">Built using ...</p>
+                      </div>
+                      <div class="card-footer">
+                          <a href="" class="footer-live">Live</a>
+                          <a href="" class="footer-git"><i class="fab fa-github"></i></a>
+                      </div>
+                    </div>
+                </div>
+                <div class="project-spacer w-100"></div>
+                <div class="col">
+                    <div class="card h-100">
+                      <img src="../static/images/akar-icons_python-fill.svg" class="card-img-top justify-content-center" alt="...">
+                      <div class="card-body">
+                        <h5 class="card-title">Project</h5>
+                        <p class="card-text">Built using ...</p>
+                      </div>
+                      <div class="card-footer">
+                          <a href="" class="footer-live">Live</a>
+                          <a href="" class="footer-git"><i class="fab fa-github"></i></a>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="p-5 contact">
+        <div class="container">
+            <div class="contact-info pb-5">
+                <h2>Contact Me</h2>
+            </div>
+            <div class="d-sm-flex justify-content-between">
+                <form name="contact-form" class="row g-3" id="contact_form" action="mailto:davidarojas16@gmail.com" method="post">
+                    <div class="col-12">
+                        <p>I'm open to discussing new opportunities, but if you have any other questions,
+                        please feel free to send me a message!</p>
+                    </div>
+                    <div class="col-md-6">
+                      <input
+                              type="text"
+                              class="form-control"
+                              id="inputName"
+                              placeholder="Name"
+                      >
+                    </div>
+                    <div class="col-md-6">
+                      <input
+                              type="email"
+                              class="form-control"
+                              id="inputEmail"
+                              name="emailField"
+                              placeholder="Email"
+                              required
+                      >
+                    </div>
+                    <div class="col-12">
+                      <input
+                              type="text"
+                              class="form-control"
+                              id="inputSubject"
+                              placeholder="Subject"
+                      >
+                    </div>
+                    <div class="col-12">
+                      <textarea
+                              class="form-control"
+                              id="textArea"
+                              name="messageField"
+                              rows="3"
+                              placeholder="Message"
+                              required>
+                      </textarea>
+                    </div>
+                    <div class="col-12 text-center">
+                        <button onclick="buttonClicked()"
+                                id="submit-btn"
+                                type="submit"
+                                class="btn btn-lg btn-outline-primary mb-3">
+                            Send!
+                        </button>
+                    </div>
+                </form>
+                <div class="contact-form-content text-center d-none d-lg-block">
+                    <img src="../static/images/undraw_code_thinking_re_gka2%201.svg" alt="Thinking image"
+                        class="img-fluid mx-auto my-auto">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="text-center my-auto">
+        <p>Built 💻 using
+            <span>
+                HTML, CSS, Bootstrap, JS, Python, Flask, and SQL
+            </span></p>
+    </footer>
+    <script src="../static/js/index.js"></script>
+{% endblock %}

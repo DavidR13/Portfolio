@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    David Rojas | Python Developer | About
+{% endblock %}
+
+{% block content %}
+    <section class="p-5 about" id="page">
+        <div class="container">
+            <div class="d-sm-flex my-auto justify-content-between">
+                <div class="about-info">
+                    <h2>About Me</h2>
+                    <p class="pt-5">
+                        I'm a <span>Python Developer</span> currently living in Miami, Florida. I have a B.S. in Information Technology
+                        - Software Track at Florida International University, but, more importantly, I have a deep passion and interest in programming,
+                        and I love learning new things and seeing the results of my efforts.
+                        <br><br>
+                        I'm a person that learns things quickly, has high-attention to detail, good organization
+                        skills, and I enjoy solving problems. Moreover, I'm someone that loves animals, sports, and nature.
+                        <br><br>
+                        I am currently interested in opportunities involving Python development, such as with back-end
+                        development and data analysis; however, I'm always willing to learn more and branch into new areas of technology.
+                    </p>
+                    <a href="{{ url_for('contact') }}">
+                        <button type="button" class="btn btn-outline-primary btn-lg">Contact Me</button>
+                    </a>
+                </div>
+                <lottie-player class="lottie w-50 d-none d-md-block" src="https://assets3.lottiefiles.com/packages/lf20_fibnfbnx.json" mode="bounce"
+                               background="transparent" speed="1" style="width: 600px; height: 600px;" loop
+                               autoplay>
+                </lottie-player>
+            </div>
+        </div>
+    </section>
+{% endblock %}

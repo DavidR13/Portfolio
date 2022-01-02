@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    David Rojas | Python Developer | Admin Login
+{% endblock %}
+
+{% block content %}
+    <section class="login text-center align-items-center justify-content-center" id="page">
+        <div class="container">
+            <div class="login-title pb-5">
+                <h2>Login</h2>
+            </div>
+            <form method="post" class="row justify-content-center">
+              <div class="mb-3 col-md-6">
+                <label for="email-login" class="form-label">Email Address</label>
+                <input
+                        type="email"
+                        class="form-control"
+                        id="email-login"
+                        name="email-login"
+                        placeholder="Email"
+                >
+              </div>
+                <div class="w-70"></div>
+              <div class="mb-3 col-md-6">
+                <label for="password-login" class="form-label">Password</label>
+                <input
+                        type="password"
+                        class="form-control"
+                        id="password-login"
+                        name="password-login"
+                        placeholder="Password"
+                >
+              </div>
+                <div class="text-center">
+                    <button type="submit" class="btn btn-lg btn-outline-primary mt-3">Submit</button>
+                </div>
+            </form>
+        </div>
+    </section>
+{% endblock %}

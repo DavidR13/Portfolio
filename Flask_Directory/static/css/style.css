@@ -1,0 +1,332 @@
+:root {
+    --primary_color: #00EAD3;
+    --secondary_color: #005F99;
+    --tertiary-color: #FFF323;
+    --fourth-color: #FF449F;
+    --white: #F6F7F7;
+    --light-gray: #c4c4c4;
+    --background: #242828;
+    --gradient: linear-gradient(0deg, rgba(0,95,153,1) 0%, rgba(0,234,211,1) 100%);
+    --box-shadow: 0px 10px 30px rgba(187, 187, 189, 0.50);
+    --blue-box-shadow: 0px 10px 30px rgba(57, 90, 112, 0.50);
+    --yellow-box-shadow: 0px 10px 30px rgba(180, 176, 61, 0.5);
+    --shadow-color: 5px 10px 30px rgba(57, 90, 112, 0.50);
+}
+
+html, body, section {
+    background-color: var(--background);
+    color: var(--white);
+    font-family: Poppins, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body::-webkit-scrollbar {
+    width: 0.25rem;
+}
+
+body::-webkit-scrollbar-track {
+    background: var(--background);
+}
+
+body::-webkit-scrollbar-thumb {
+    background: var(--primary_color);
+}
+
+/* navbar styling */
+.navbar-nav {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-item {
+    padding: 5px;
+}
+
+.navbar .container .navbar-brand {
+    font-size: 34px;
+    color: var(--primary_color);
+    font-weight: 500;
+}
+
+.navbar .container .navbar-brand:hover {
+    color: var(--tertiary-color)
+}
+
+.navbar .container .collapse .navbar-nav .nav-item .nav-link {
+    color: var(--white);
+}
+
+.navbar .container .collapse .navbar-nav .nav-item .nav-link:hover {
+    color: var(--primary_color);
+}
+
+.github-icon, .linkedin-icon {
+    font-size: 20px;
+}
+
+/* =========== HOME PAGE STYLING =========== */
+/* banner section styling */
+.banner-h1-span {
+    color: var(--primary_color);
+    text-shadow: var(--shadow-color);
+}
+
+.banner-h1-span:hover {
+    color: var(--tertiary-color);
+}
+
+.banner-p-span {
+    color: var(--light-gray);
+}
+
+.banner-info {
+    padding-top: 15vh;
+    overflow: hidden;
+}
+
+.banner-info h3 {
+    font-weight: 500;
+    font-size: 42px;
+}
+
+.banner-info h1 {
+    font-weight: 600;
+    font-size: 84px;
+}
+
+.banner .container .d-sm-flex .banner-info .btn {
+    color: var(--white);
+    border-color: var(--primary_color);
+    padding: 10px 25px 10px 25px;
+    margin-top: 20px;
+}
+
+.banner .container .d-sm-flex .banner-info .btn:hover {
+    background-color: var(--primary_color);
+    color: var(--background);
+}
+
+.banner .container .d-sm-flex {
+    padding-top: 7%;
+}
+
+.banner .container .scroll-down .lottie {
+    margin: 0 auto;
+}
+
+/* skills section styling */
+.skills .container .row .col-lg-3 .card {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0.6rem;
+    width: 6rem;
+    background: var(--background);
+    border: 0;
+}
+
+.skills .row .col-lg-3 .card:hover {
+    box-shadow: var(--blue-box-shadow);
+}
+
+.skills .container .d-lg-flex .skills-description p span {
+    color: var(--primary_color);
+}
+
+.w-100 {
+    padding: 2%;
+}
+
+/* projects section styling */
+.projects .container .row .col .card .card-body p {
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.projects .container .row .col {
+    padding: 1rem;
+}
+
+.projects .container .row .col .card {
+    background-color: var(--background);
+    color: var(--white);
+    border: var(--primary_color) 1px solid;
+    box-shadow: var(--blue-box-shadow);
+}
+
+.projects .container .row .col .card img {
+    width: 60%;
+    padding: 5%;
+    margin: 0 auto;
+}
+
+.projects .container .row .col .card-footer {
+    background-color: var(--background);
+    border: var(--primary_color) 1px solid;
+}
+
+.projects .container .row .col .card-footer a {
+    text-decoration: none;
+    font-size: 20px;
+    padding: 0 5% 0 0;
+    color: var(--light-gray);
+}
+
+.projects .container .row .col .card-footer a:hover {
+    color: var(--tertiary-color);
+}
+
+.projects .container .row .w-100 {
+    padding: 0.1rem;
+}
+
+/* contact section styling */
+.contact .container .d-sm-flex .row {
+    width: 70%;
+}
+
+.contact .container .d-sm-flex .row input {
+    background-color: #3d3f3f;
+    border: none;
+    color: var(--white);
+    font-size: 16px;
+    height: 5vh;
+    border-radius: 1px;
+}
+
+.contact .container .d-sm-flex .row textarea {
+    background-color: #3d3f3f;
+    border: none;
+    color: var(--white);
+    font-size: 16px;
+    height: 30vh;
+    border-radius: 1px;
+}
+
+.contact .container .d-sm-flex .row button {
+    color: var(--white);
+    border-color: var(--primary_color);
+    padding: 10px 25px 10px 25px;
+    margin-top: 20px;
+}
+
+.contact .container .d-sm-flex .row button:hover {
+    background-color: var(--primary_color);
+    color: var(--background);
+}
+
+.contact-form-content p {
+    width: 40vw;
+    font-size: 16px;
+    margin: 0 auto;
+}
+
+.contact-form-content img {
+    width: 70%;
+    margin: 0 auto;
+    padding-top: 3rem;
+}
+
+@media only screen and (max-width: 768px) {
+    .contact .container .d-sm-flex .row {
+        width: 100% !important;
+        margin: 0 auto;
+    }
+}
+
+/* footer for home page only */
+footer {
+    background-color: var(--background);
+    color: var(--white);
+    border-top: 1px solid var(--primary_color);
+    padding-top: 1rem;
+}
+
+footer p span {
+    color: var(--primary_color);
+}
+
+/* home page animations */
+.banner-info h3 {
+    animation: 2s slide-right;
+}
+
+@keyframes slide-right {
+    from {
+        margin-left: -100%;
+    }
+
+    to {
+        margin-left: 0;
+    }
+}
+
+.github-icon:hover, .linkedin-icon:hover {
+    animation: 1s rotate;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* =========== ABOUT PAGE STYLING =========== */
+.about .container .d-sm-flex .about-info button {
+    color: var(--white);
+    border-color: var(--primary_color);
+    padding: 10px 25px 10px 25px;
+    margin-top: 20px;
+}
+
+.about .container .d-sm-flex .about-info button:hover {
+    background-color: var(--primary_color);
+    color: var(--background);
+}
+
+.about .container .d-sm-flex .about-info {
+    width: 45%;
+}
+
+@media only screen and (max-width: 768px) {
+    .about .container .d-sm-flex .about-info {
+        width: 100%;
+    }
+}
+
+.about .container .d-sm-flex .about-info p span {
+    color: var(--primary_color);
+}
+
+/* =========== LOGIN PAGE STYLING =========== */
+.login .container .text-center button {
+    color: var(--white);
+    border-color: var(--primary_color);
+    padding: 10px 25px 10px 25px;
+    margin-top: 20px;
+}
+
+.login .container .text-center button:hover {
+    background-color: var(--primary_color);
+    color: var(--background);
+}
+
+.login .container form {
+    margin: 0 auto;
+}
+
+/* =========== ALL PAGES STYLING =========== */
+#page {
+    padding-top: 20vh !important;
+    height: 100vh !important;
+}
+
+h2 {
+    color: var(--tertiary-color);
+    font-size: 48px !important;
+}
