@@ -1,5 +1,6 @@
 from flask import render_template, request
 from Flask_Directory import app
+from .models import *
 import os
 
 
@@ -28,7 +29,9 @@ def projects():
 
 @app.route('/blog')
 def blog():
-    return render_template('blog.html')
+    posts = Post.query.all()
+
+    return render_template('blog.html', posts=posts)
 
 
 @app.route('/contact')

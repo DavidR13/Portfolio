@@ -1,6 +1,7 @@
 from flask import render_template, request, redirect, flash, url_for
 from Flask_Directory import app
 from .models import *
+from . import db
 from werkzeug.security import check_password_hash
 from flask_login import login_user, logout_user, login_required
 
@@ -27,13 +28,25 @@ def login():
 
     return render_template('login.html')
 
-@app.route('/post')
+@app.route('/post', methods=['GET', 'POST'])
 @login_required
 def post():
+    if request.method == 'POST':
+        title = request.form.get('title')
+        slug = request.form.get('slug')
+        content = request.form.get('content')
+
+        post = Post(title=title, slug=slug, content=content)
+        db.session.add(post)
+        db.session.commit()
+        flash('Post created.', category='success')
+        return redirect(url_for('blog'))
+
     return render_template('post.html')
 
 @app.route('/logout')
 @login_required
 def logout():
     logout_user()
+    flash('Logout successful.', category='success')
     return redirect(url_for('index'))
