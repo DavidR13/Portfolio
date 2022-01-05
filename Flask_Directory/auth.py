@@ -3,10 +3,9 @@ from Flask_Directory import app
 from .models import *
 from . import db
 from werkzeug.security import check_password_hash
-from flask_login import login_user, logout_user, login_required
+from flask_login import login_user, logout_user, login_required, current_user
 
 '''ADMIN login/authentication, logout, and post capabilities'''
-
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():

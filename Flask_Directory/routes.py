@@ -2,7 +2,7 @@ from flask import render_template, request
 from Flask_Directory import app
 from .models import *
 import os
-
+from flask_login import current_user
 
 @app.route('/')
 @app.route('/home')
@@ -36,7 +36,7 @@ def blog():
 
 @app.route('/posts/<int:id>/<string:slug>')
 def individual_post(id, slug):
-    user = User.query.all()
+    user = str(current_user)
     post = Post.query.get_or_404(id)
     return render_template('individual_post.html', user=user, post=post)
 
