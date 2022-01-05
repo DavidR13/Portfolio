@@ -144,6 +144,10 @@ body::-webkit-scrollbar-thumb {
     font-weight: 300;
 }
 
+.projects .container .row .col .card .card-body h5 {
+    color: var(--primary_color);
+}
+
 .projects .container .row .col {
     padding: 1rem;
 }
@@ -337,21 +341,17 @@ footer p span {
 .blog-post-title {
     text-decoration: none;
     font-size: 20px;
-    padding: 0 5% 0 0;
+    padding: 0 5% 2vh 0;
     color: var(--white);
 }
 
 .blog-post-title:hover {
-    color: var(--primary_color);
-}
-
-.blog-post-title h5 {
-    padding-bottom: 2vh;
+    color: var(--tertiary-color);
 }
 
 #blog-card {
     background-color: var(--background);
-    border: #1b1e1e 1px solid;
+    border: #9f9e9e 1px solid;
     border-radius: 1px;
     box-shadow: var(--blue-box-shadow);
     padding: 1rem;
@@ -360,6 +360,56 @@ footer p span {
 
 .blog-post-content {
     color: var(--light-gray);
+}
+
+#truncate p {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 10;
+    font-weight: 400;
+}
+
+#truncate .read-more {
+    text-decoration: none;
+    color: var(--primary_color);
+}
+
+#truncate .read-more:hover {
+    color: var(--tertiary-color);
+}
+
+#truncate .read-more:hover::after {
+    content: '>>';
+    color: var(--tertiary-color);
+    width: 20%;
+    padding-left: 5px;
+}
+
+/* =========== INDIVIDUAL BLOG PAGE STYLING =========== */
+.back-to-blog a {
+    text-decoration: none;
+    color: var(--primary_color);
+    font-size: 18px;
+}
+
+.back-to-blog a:hover {
+    color: var(--tertiary-color);
+}
+
+#individual-post-title {
+    font-size: 56px;
+    color: var(--tertiary-color);
+    padding: 0 10px 2vh 10px;
+}
+
+.post-content {
+    padding: 0 10px 0 10px;
+}
+
+#delete-post {
+    color: var(--white);
+    border-color: var(--primary_color);
 }
 
 /* =========== ALL PAGES STYLING =========== */

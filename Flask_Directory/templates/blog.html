@@ -7,7 +7,7 @@
 {% block content %}
     <section class="p-5 blog" id="page">
         <div class="container">
-            <div class="blog-title">
+            <div class="blog-title pb-5">
                 <h2>Blog</h2>
             </div>
             <div class="row">
@@ -15,10 +15,11 @@
                 <div class="col-md-4 pb-4">
                     <div class="card h-100" id="blog-card">
                         <div class="card-body d-flex flex-column" id="truncate">
-                            <a href="" class="blog-post-title">
-                                <h5 class="card-title">{{ post.title }}</h5>
+                            <a href="{{ url_for('individual_post', id=post.id, slug=post.slug) }}" class="blog-post-title">
+                                <h4 class="card-title">{{ post.title }}</h4>
                             </a>
-                            <p class="card-text blog-post-content text-truncate">{{ post.content }}</p>
+                            <p class="card-text blog-post-content">{{ post.content }}</p>
+                            <a href="{{ url_for('individual_post', id=post.id, slug=post.slug) }}" class="read-more">Read More...</a>
                         </div>
                     </div>
                 </div>

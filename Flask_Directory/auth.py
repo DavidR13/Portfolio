@@ -44,6 +44,7 @@ def post():
 
     return render_template('post.html')
 
+
 @app.route('/logout')
 @login_required
 def logout():

@@ -34,6 +34,13 @@ def blog():
     return render_template('blog.html', posts=posts)
 
 
+@app.route('/posts/<int:id>/<string:slug>')
+def individual_post(id, slug):
+    user = User.query.all()
+    post = Post.query.get_or_404(id)
+    return render_template('individual_post.html', user=user, post=post)
+
+
 @app.route('/contact')
 def contact():
     email = os.environ['EMAIL']
