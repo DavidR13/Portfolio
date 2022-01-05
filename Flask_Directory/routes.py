@@ -1,7 +1,8 @@
-from flask import render_template, request
+from flask import render_template
 from Flask_Directory import app
+from .models import *
 import os
-
+from flask_login import current_user
 
 @app.route('/')
 @app.route('/home')
@@ -28,7 +29,16 @@ def projects():
 
 @app.route('/blog')
 def blog():
-    return render_template('blog.html')
+    posts = Post.query.all()
+
+    return render_template('blog.html', posts=posts)
+
+
+@app.route('/posts/<int:id>/<string:slug>')
+def individual_post(id, slug):
+    user = str(current_user).strip('< >')
+    post = Post.query.get_or_404(id)
+    return render_template('individual_post.html', user=user, post=post)
 
 
 @app.route('/contact')

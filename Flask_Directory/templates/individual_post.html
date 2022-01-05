@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    David Rojas | Python Developer | {{ post.title }}
+{% endblock %}
+
+{% block content %}
+    <section class="p-5 post" id="page">
+        <div class="container">
+            <div class="row justify-content-between">
+                <div class="back-to-blog pb-4 col-3">
+                    <a href="{{ url_for('blog') }}">← Back to Blog</a>
+                </div>
+                {% if user == "User 1" %}
+                <div class="delete-post btn-group col-sm-1 pb-4">
+                    <button id="delete-post" type="button" class="btn btn-sm btn-outline-primary dropdown-toggle"
+                            data-bs-toggle="dropdown"></button>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href="{{ url_for('delete_post', id=post.id) }}" class="dropdown-item">Delete Post</a>
+                        </li>
+                    </ul>
+                </div>
+                {% endif %}
+            </div>
+            <div class="row align-items-center justify-content-center">
+                <div class="col-md-12 pb-4">
+                    <div class="card h-100" id="blog-card">
+                        <div class="card-body d-flex flex-column">
+                            <h1 class="card-title pb-4" id="individual-post-title">{{ post.title }}</h1>
+                            <p class="card-text post-content">{{ post.content }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

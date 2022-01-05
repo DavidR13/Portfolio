@@ -5,5 +5,47 @@
 {% endblock %}
 
 {% block content %}
-
+    <section class="post text-center" id="page">
+        <div class="container">
+            <div class="post-title pb-5">
+                <h2>Make a Blog Post</h2>
+            </div>
+            <form name="blog-post" method="post" class="row justify-content-center">
+                <div class="mb-3 col-md-8">
+                    <input
+                            type="text"
+                            class="form-control"
+                            id="title"
+                            placeholder="Title"
+                            name="title"
+                    >
+                </div>
+                <div class="w-70"></div>
+                <div class="mb-3 col-md-8">
+                    <input
+                            type="text"
+                            class="form-control"
+                            id="slug"
+                            placeholder="Slug"
+                            name="slug"
+                    >
+                </div>
+                <div class="mb-3 col-md-8">
+                    <textarea
+                            name="content"
+                            id="content"
+                            class="form-control"
+                            rows="15"
+                            placeholder="Content"></textarea>
+                </div>
+                <div class="col-12 text-center">
+                    <button
+                            id="post"
+                            type="submit"
+                            class="btn btn-lg btn-outline-primary mb-3">
+                        Post</button>
+                </div>
+            </form>
+        </div>
+    </section>
 {% endblock %}

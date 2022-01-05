@@ -7,8 +7,8 @@
     --light-gray: #c4c4c4;
     --background: #242828;
     --gradient: linear-gradient(0deg, rgba(0,95,153,1) 0%, rgba(0,234,211,1) 100%);
-    --box-shadow: 0px 10px 30px rgba(187, 187, 189, 0.50);
-    --blue-box-shadow: 0px 10px 30px rgba(57, 90, 112, 0.50);
+    --box-shadow: 0px 0px 10px rgba(61, 61, 61, 0.5);
+    --blue-box-shadow: 0px 0px 30px rgba(57, 90, 112, 0.50);
     --yellow-box-shadow: 0px 10px 30px rgba(180, 176, 61, 0.5);
     --shadow-color: 5px 10px 30px rgba(57, 90, 112, 0.50);
 }
@@ -142,6 +142,10 @@ body::-webkit-scrollbar-thumb {
 .projects .container .row .col .card .card-body p {
     font-size: 16px;
     font-weight: 300;
+}
+
+.projects .container .row .col .card .card-body h5 {
+    color: var(--primary_color);
 }
 
 .projects .container .row .col {
@@ -318,6 +322,94 @@ footer p span {
 
 .login .container form {
     margin: 0 auto;
+}
+
+/* =========== POST PAGE STYLING =========== */
+.post .container form button {
+    color: var(--white);
+    border-color: var(--primary_color);
+    padding: 10px 25px 10px 25px;
+    margin-top: 20px;
+}
+
+.post .container form button:hover {
+    background-color: var(--primary_color);
+    color: var(--background);
+}
+
+/* =========== BLOG PAGE STYLING =========== */
+.blog-post-title {
+    text-decoration: none;
+    font-size: 20px;
+    padding: 0 5% 2vh 0;
+    color: var(--white);
+}
+
+.blog-post-title:hover {
+    color: var(--tertiary-color);
+}
+
+#blog-card {
+    background-color: var(--background);
+    border: #9f9e9e 1px solid;
+    border-radius: 1px;
+    box-shadow: var(--blue-box-shadow);
+    padding: 1rem;
+    min-height: 50vh;
+}
+
+.blog-post-content {
+    color: var(--light-gray);
+}
+
+#truncate p {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 10;
+    font-weight: 400;
+}
+
+#truncate .read-more {
+    text-decoration: none;
+    color: var(--primary_color);
+}
+
+#truncate .read-more:hover {
+    color: var(--tertiary-color);
+}
+
+#truncate .read-more:hover::after {
+    content: '>>';
+    color: var(--tertiary-color);
+    width: 20%;
+    padding-left: 5px;
+}
+
+/* =========== INDIVIDUAL BLOG PAGE STYLING =========== */
+.back-to-blog a {
+    text-decoration: none;
+    color: var(--primary_color);
+    font-size: 18px;
+}
+
+.back-to-blog a:hover {
+    color: var(--tertiary-color);
+}
+
+#individual-post-title {
+    font-size: 56px;
+    color: var(--tertiary-color);
+    padding: 0 10px 2vh 10px;
+}
+
+.post-content {
+    padding: 0 10px 0 10px;
+}
+
+#delete-post {
+    color: var(--white);
+    border-color: var(--primary_color);
 }
 
 /* =========== ALL PAGES STYLING =========== */
