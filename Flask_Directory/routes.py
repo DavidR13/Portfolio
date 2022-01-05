@@ -1,4 +1,4 @@
-from flask import render_template, request
+from flask import render_template
 from Flask_Directory import app
 from .models import *
 import os
@@ -36,7 +36,7 @@ def blog():
 
 @app.route('/posts/<int:id>/<string:slug>')
 def individual_post(id, slug):
-    user = str(current_user)
+    user = str(current_user).strip('< >')
     post = Post.query.get_or_404(id)
     return render_template('individual_post.html', user=user, post=post)
 

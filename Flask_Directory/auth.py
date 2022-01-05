@@ -3,7 +3,7 @@ from Flask_Directory import app
 from .models import *
 from . import db
 from werkzeug.security import check_password_hash
-from flask_login import login_user, logout_user, login_required, current_user
+from flask_login import login_user, logout_user, login_required
 
 '''ADMIN login/authentication, logout, and post capabilities'''
 
@@ -38,15 +38,26 @@ def post():
         post = Post(title=title, slug=slug, content=content)
         db.session.add(post)
         db.session.commit()
-        flash('Post created.', category='success')
+
         return redirect(url_for('blog'))
 
     return render_template('post.html')
+
+
+@app.route('/delete-post/<int:id>')
+@login_required
+def delete_post(id):
+    post = Post.query.filter_by(id=id).first()
+
+    db.session.delete(post)
+    db.session.commit()
+
+    return redirect(url_for('index'))
 
 
 @app.route('/logout')
 @login_required
 def logout():
     logout_user()
-    flash('Logout successful.', category='success')
+
     return redirect(url_for('index'))
