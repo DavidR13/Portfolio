@@ -2,7 +2,7 @@ from flask import render_template, request, redirect, flash, url_for
 from Flask_Directory import app
 from .models import *
 from . import db
-from werkzeug.security import check_password_hash
+from werkzeug.security import check_password_hash, generate_password_hash
 from flask_login import login_user, logout_user, login_required
 
 '''ADMIN login/authentication, logout, and post capabilities'''
@@ -27,6 +27,19 @@ def login():
             flash('Email does not exist.', category='error')
 
     return render_template('login.html')
+
+
+@app.route('/signup', methods=['GET', 'POST'])
+def signup():
+    if request.method == 'POST':
+        email = request.form.get('email-signup')
+        password = request.form.get('password-signup')
+
+        new_user = User(email=email, password=generate_password_hash(password, method='sha256'))
+        db.session.add(new_user)
+        db.session.commit()
+
+    return render_template('my_signup.html')
 
 
 @app.route('/post', methods=['GET', 'POST'])
