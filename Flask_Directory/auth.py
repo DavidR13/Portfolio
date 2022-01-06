@@ -7,6 +7,7 @@ from flask_login import login_user, logout_user, login_required
 
 '''ADMIN login/authentication, logout, and post capabilities'''
 
+
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     if request.method == 'POST':
@@ -26,6 +27,7 @@ def login():
             flash('Email does not exist.', category='error')
 
     return render_template('login.html')
+
 
 @app.route('/post', methods=['GET', 'POST'])
 @login_required

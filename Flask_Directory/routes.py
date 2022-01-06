@@ -1,13 +1,12 @@
 from flask import render_template
 from Flask_Directory import app
 from .models import *
-import os
 from flask_login import current_user
 
 @app.route('/')
 @app.route('/home')
 def index():
-    email = os.environ['EMAIL']
+    email = 'davidarojas16@gmail.com'
 
     return render_template("home.html", value=email)
 
@@ -43,6 +42,6 @@ def individual_post(id, slug):
 
 @app.route('/contact')
 def contact():
-    email = os.environ['EMAIL']
+    email = 'davidarojas16@gmail.com'
 
     return render_template('contact.html', value=email)
