@@ -2,11 +2,12 @@ from flask import render_template
 from Flask_Directory import app
 from .models import *
 from flask_login import current_user
+import os
 
 @app.route('/')
 @app.route('/home')
 def index():
-    email = 'davidarojas16@gmail.com'
+    email = os.environ['EMAIL']
 
     return render_template("home.html", value=email)
 
