@@ -43,6 +43,6 @@ def individual_post(id, slug):
 
 @app.route('/contact')
 def contact():
-    email = 'davidarojas16@gmail.com'
+    email = os.environ['EMAIL']
 
     return render_template('contact.html', value=email)
