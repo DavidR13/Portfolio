@@ -422,3 +422,12 @@ h2 {
     color: var(--tertiary-color);
     font-size: 48px !important;
 }
+
+@media only screen and (max-width: 768px) {
+    h1 {
+        font-size: 36px;
+    }
+    h2 {
+        font-size: 28px;
+    }
+}
