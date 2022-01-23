@@ -18,7 +18,7 @@
                             <a href="{{ url_for('individual_post', id=post.id, slug=post.slug) }}" class="blog-post-title">
                                 <h4 class="card-title">{{ post.title }}</h4>
                             </a>
-                            <p class="card-text blog-post-content">{{ post.content }}</p>
+                            <p class="card-text blog-post-content">{{ post.content|safe }}</p>
                             <a href="{{ url_for('individual_post', id=post.id, slug=post.slug) }}" class="read-more">Read More...</a>
                         </div>
                     </div>

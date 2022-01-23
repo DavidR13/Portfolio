@@ -4,6 +4,7 @@ from .models import *
 from . import db
 from werkzeug.security import check_password_hash, generate_password_hash
 from flask_login import login_user, logout_user, login_required
+from .forms import CreatePost
 
 '''ADMIN login/authentication, logout, and post capabilities'''
 
@@ -32,18 +33,20 @@ def login():
 @app.route('/post', methods=['GET', 'POST'])
 @login_required
 def post():
-    if request.method == 'POST':
-        title = request.form.get('title')
-        slug = request.form.get('slug')
-        content = request.form.get('content')
+    form = CreatePost()
 
-        post = Post(title=title, slug=slug, content=content)
-        db.session.add(post)
+    if request.method == 'POST':
+        title = form.title.data
+        slug = form.slug.data
+        content = form.content.data
+
+        blog_post = Post(title=title, slug=slug, content=content)
+        db.session.add(blog_post)
         db.session.commit()
 
         return redirect(url_for('blog'))
 
-    return render_template('post.html')
+    return render_template('post.html', form=form)
 
 
 @app.route('/delete-post/<int:id>')

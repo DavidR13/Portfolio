@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% import "bootstrap/wtf.html" as wtf %}
 
 {% block title %}
     David Rojas | Python Developer | Add Blog Post
@@ -10,40 +11,23 @@
             <div class="post-title pb-5">
                 <h2>Make a Blog Post</h2>
             </div>
-            <form name="blog-post" method="post" class="row justify-content-center">
-                <div class="mb-3 col-md-8">
-                    <input
-                            type="text"
-                            class="form-control"
-                            id="title"
-                            placeholder="Title"
-                            name="title"
-                    >
-                </div>
-                <div class="w-70"></div>
-                <div class="mb-3 col-md-8">
-                    <input
-                            type="text"
-                            class="form-control"
-                            id="slug"
-                            placeholder="Slug"
-                            name="slug"
-                    >
-                </div>
-                <div class="mb-3 col-md-8">
-                    <textarea
-                            name="content"
-                            id="content"
-                            class="form-control"
-                            rows="15"
-                            placeholder="Content"></textarea>
-                </div>
-                <div class="col-12 text-center">
-                    <button
-                            id="post"
-                            type="submit"
-                            class="btn btn-lg btn-outline-primary mb-3">
-                        Post</button>
+            <form method="post" class="form form-horizontal">
+                <div class="mx-auto col-lg-8 col-md-10">
+                    {{ ckeditor.load() }}
+                    {{ ckeditor.config(name='content') }}
+
+                    <div class="mb-4">
+                        {{ wtf.form_field(form.title) }}
+                    </div>
+                    <div class="mb-4">
+                        {{ wtf.form_field(form.slug) }}
+                    </div>
+                    <div class="mb-4">
+                        {{ wtf.form_field(form.content) }}
+                    </div>
+                    <div class="mb-4 btn btn-lg btn-primary">
+                        {{ wtf.form_field(form.submit) }}
+                    </div>
                 </div>
             </form>
         </div>
