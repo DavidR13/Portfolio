@@ -232,25 +232,6 @@ body::-webkit-scrollbar-thumb {
     padding-top: 3rem;
 }
 
-@media only screen and (max-width: 768px) {
-    .contact .container .d-sm-flex .row {
-        width: 100% !important;
-        margin: 0 auto;
-    }
-}
-
-/* footer for home page only */
-footer {
-    background-color: var(--background);
-    color: var(--white);
-    border-top: 1px solid var(--primary_color);
-    padding-top: 1rem;
-}
-
-footer p span {
-    color: var(--primary_color);
-}
-
 /* home page animations */
 .banner-info h3 {
     animation: 2s slide-right;
@@ -295,12 +276,6 @@ footer p span {
 
 .about .container .d-sm-flex .about-info {
     width: 45%;
-}
-
-@media only screen and (max-width: 768px) {
-    .about .container .d-sm-flex .about-info {
-        width: 100%;
-    }
 }
 
 .about .container .d-sm-flex .about-info p span {
@@ -423,8 +398,11 @@ h2 {
 }
 
 @media only screen and (max-width: 768px) {
+    #page {
+        padding-top: 15vh !important;
+    }
     h1 {
-        font-size: 36px !important;
+        font-size: 40px !important;
     }
     h2 {
         font-size: 34px !important;
@@ -432,9 +410,16 @@ h2 {
     h3 {
         font-size: 32px !important;
     }
-
     p {
         font-size: 14px !important;
     }
 
+    .contact .container .d-sm-flex .row {
+        width: 100% !important;
+        margin: 0 auto;
+    }
+
+    .about .container .d-sm-flex .about-info {
+        width: 100%;
+    }
 }
